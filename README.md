@@ -1,16 +1,76 @@
-# React + Vite
+# Team Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple web app to manage tasks, projects, and team members. Built with React, Node.js, and MongoDB.
 
-Currently, two official plugins are available:
+## Live Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔗 **https://task-manager-frontend-a1kj.onrender.com**
 
-## React Compiler
+## What You Can Do
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### For Admin
+- Create, edit, delete tasks
+- Create projects
+- Add or remove team members
+- Change member roles (Admin/Member/Viewer)
+- See all tasks in the system
 
-## Expanding the ESLint configuration
+### For Members
+- See only tasks assigned to you
+- Update your task status (Todo → In Progress → Done)
+- View your dashboard
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## How to Use
+
+### Register
+1. Go to the website
+2. Click "Register"
+3. Fill your name, email, password
+4. Select role (Admin or Member)
+5. Click Register
+
+### Login
+1. Enter your email and password
+2. Click Login
+3. You'll go to your dashboard
+
+### Create a Task
+1. Click "+ New Task" button
+2. Fill title, description, assignee, due date
+3. Click Create
+
+### Update Task Status
+1. Click the status dropdown on any task
+2. Change to Todo, In Progress, or Done
+
+### Add Team Member (Admin only)
+1. Go to Team section
+2. Click "Add Member"
+3. Enter name, email, role
+4. Member can login with email and default password: member123
+
+### Create Project (Admin only)
+1. Go to Projects section
+2. Click "Create Project"
+3. Enter name and description
+
+## Demo Accounts
+
+| Role | Email | Password |
+|------|-------|----------|
+| Admin | admin@taskpro.com | Admin@123 |
+| Member | member@example.com | member123 |
+
+## Tech Stack
+
+- **Frontend:** React, Vite, CSS
+- **Backend:** Node.js, Express
+- **Database:** MongoDB Atlas
+- **Deployment:** Render
+
+## Run Locally
+
+### 1. Clone the project
+```bash
+git clone https://github.com/Komal0032/task-manager.git
+cd task-manager
