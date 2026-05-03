@@ -5,11 +5,10 @@ require('dotenv').config();
 
 const app = express();
 
-// Allow all origins for CORS (fix for localhost + Render)
+// CORS - Allow all origins for production
 app.use(cors({
   origin: '*',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  credentials: true
 }));
 
 app.use(express.json());
