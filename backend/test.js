@@ -8,7 +8,7 @@ async function test() {
     
     console.log('Connecting to MongoDB...');
     await mongoose.connect(process.env.MONGODB_URI);
-    console.log('✅ Connected');
+    console.log(' Connected');
     
     console.log('Deleting old user...');
     await User.deleteMany({ email: 'test@example.com' });
@@ -22,7 +22,7 @@ async function test() {
     });
     
     await user.save();
-    console.log('✅ User created! ID:', user._id);
+    console.log(' User created! ID:', user._id);
     
     console.log('Testing password...');
     user.comparePassword('123456', (err, isMatch) => {
@@ -33,7 +33,7 @@ async function test() {
       console.log('Password match:', isMatch);
       
       if (isMatch) {
-        console.log('\n🎉 SUCCESS! Everything works!\n');
+        console.log('\n SUCCESS! Everything works!\n');
       }
       
       mongoose.connection.close();
